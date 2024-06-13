@@ -427,3 +427,50 @@ if __name__ == "__main__":
     result = add(5, 3)
     print(f"Result: {result}")
 
+Configure the Debugger:
+Click on the Run and Debug icon in the Activity Bar on the side of the VS Code window or press Ctrl + Shift + D.
+Click create a launch.json file to configure the debugging environment. VS Code usually suggests the appropriate configuration based on the project. For a Python project, a basic launch.json might look like this:
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
+
+Set Breakpoints:
+Click in the gutter to the left of the line numbers in your source code to set breakpoints. A red dot will appear indicating the breakpoint.
+Start Debugging:
+Go to the Run and Debug view, select your configuration (e.g., Python: Current File), and click the green play button.
+Alternatively, press F5 to start the debugging session.
+Key Debugging Features in VS Code:
+Breakpoints:
+Breakpoints allow you to pause program execution at specific points. This is useful for examining the state of the application at various stages.
+Watch Expressions:
+The Watch section lets you specify expressions that you want to evaluate and monitor as you step through the code.
+Call Stack:
+The Call Stack section shows the current call stack and allows you to navigate through different frames.
+Variables:
+The Variables section shows the current values of variables in the scope. It updates as you step through the code.
+Step Controls:
+Use the step controls to navigate through your code:
+Continue (F5): Resume program execution until the next breakpoint.
+Step Over (F10): Execute the next line of code, but do not step into functions.
+Step Into (F11): Step into functions to debug inside them.
+Step Out (Shift + F11): Step out of the current function to the caller.
+Debug Console:
+The Debug Console allows you to execute arbitrary code and evaluate expressions in the context of the current breakpoint.
+Integrated Terminal:
+Use the integrated terminal for running commands and scripts in the context of your project without leaving the editor.
+Conditional Breakpoints:
+Right-click on a breakpoint and choose "Edit Breakpoint" to add a condition. This is useful for breaking only when certain conditions are met.
+Logpoints:
+Logpoints are like breakpoints but instead of pausing execution, they log a message to the console. This is useful for debugging without stopping your program.
+Inline Values:
+When debugging, VS Code can show inline values of variables next to the code for quick reference. This feature can be enabled or configured in the settings.
+
